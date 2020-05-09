@@ -1,15 +1,10 @@
-const timer = id => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log(`resolving ${id}...`);
-      resolve('hello world');
-    }, Math.random() * 1000);
-  });
-};
+const timer = id => new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log(`Resolving ${id}...`);
+    resolve(`Hello World ${id}`);
+  }, Math.random() * 1000);
+});
 
 Promise
-  .race([
-    timer(0),
-    timer(1)
-  ])
+  .race([timer(1), timer(2)])
   .then(result => console.log(result));

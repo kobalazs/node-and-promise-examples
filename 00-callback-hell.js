@@ -1,13 +1,13 @@
 const timer = (callback) => {
-  setTimeout(() => callback(), 1000);
+  setTimeout(callback, 1000);
 };
 
 timer(() => {
-  console.log('hello world');
+  console.log('Hello World');
   timer(() => {
-    console.log('hello world');
+    console.log('Hello World');
     timer(() => {
-      console.log('hello world');
+      console.log('Hello World');
     });
   });
 });

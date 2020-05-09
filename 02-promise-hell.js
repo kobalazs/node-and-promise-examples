@@ -1,17 +1,15 @@
-const timer = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => resolve('hello world'), 1000);
-  });
-};
+const timer = () => new Promise((resolve, reject) => {
+  setTimeout(() => resolve('Hello World'), 1000);
+});
 
-timer().then(text => {
-  console.log(text);
-  timer().then(text2 => {
-    console.log(text2);
-    timer().then(text3 => {
-      console.log(text3);
-      timer().then(text4 => {
-        console.log(text4);
+timer().then(message => {
+  console.log(message);
+  timer().then(message2 => {
+    console.log(message2);
+    timer().then(message3 => {
+      console.log(message3);
+      timer().then(message4 => {
+        console.log(message4);
       });
     });
   });

@@ -1,6 +1,6 @@
 const timer = () => {
   return new Promise((resolve, reject) => {
-    setTimeout(() => resolve('hello world'), 1000);
+    setTimeout(() => resolve('Hello World'), 1000);
   });
 };
 
